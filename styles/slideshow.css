@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 160svh;
+    width: 100svw;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    background-color: #cc88cc;
+}
+
+dialog#configurationDialog {
+    height: calc(100svh - 20px);
+    width: calc(100svw - 20px);
+}
+
+dialog#configurationDialog legend {
+    font-weight: bold;
+    font-size: 200%;
+}
+
+fieldset#configurationFieldSet {
+    margin: 0 auto;
+    height: calc(90% - 20px);
+    width: calc(100% - 20px);
+    padding: 0;
+}
+
+#message{
+    height: calc(10% - 20px);
+}
+
+#menu-container {
+    text-align: center;
+    /*border: 2px dashed #ccc;*/
+    background-color: #fff;
+    border-radius: 8px;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    margin: 0 auto;
+
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 0.1fr 0.1fr; 
+    place-items: center;
+}
+
+
+fieldset div input[type=number] {
+    vertical-align: middle;
+    width: 200px;
+    height: 36px;
+    font-size: 24px;
+    margin: 0 1em 0 1em;
+    display: inline-block;
+}
+
+fieldset div label {
+    font-weight: bold;
+    vertical-align: middle;
+    width: 16em;
+    height: 36px;
+    display: inline-block;
+}
+
+#dropZone {
+    border: 2px dashed #007bff;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 100%;
+    width: calc(100% - 20px);
+
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    display: grid;
+    place-items: center;
+}
+
+
+
+#dropZone.dragover {
+    background-color: #e9f7ff;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#pdf-container {
+    max-width: 100svw;
+    max-height: 100svh;
+    /*object-fit: contain;*/
+    width: 100svw;
+    height: 100svh;
+    overflow: hidden;
+    position: relative;
+    background: #f0f0f0;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 0;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    transition: width 0.5s ease;
+
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+canvas {
+    position: absolute;
+    top: auto;
+    left: auto;
+    transition: opacity 1000ms;
+    opacity: 1;
+}

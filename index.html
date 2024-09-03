@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Slideshow</title>
+    <link rel="stylesheet" href="styles/slideshow.css">
+</head>
+
+<body>
+    <dialog id="configurationDialog">
+        <fieldset id="configurationFieldSet">
+            <legend>PDFを追加</legend>
+            <div id="menu-container">
+                <div id="dropZone" autofocus>
+                    <p>ここにPDFファイルをドラッグ＆ドロップするか、<br>
+                        クリック/タップしてファイルを選択してください。</p>
+                        <input type="file" id="fileInput" accept=".pdf">
+                </div>
+                <div>
+                    <label for="interval">スライド送りの間隔(ms)</label>
+                    <input type="number" id="interval" value="10000">
+                </div>
+                <div>
+                    <label for="rotate">回転角度(度)</label>
+                    <input type="number" id="rotate" value="0">
+                </div>
+            </div>
+        </fieldset>
+        <p id="message"></p>
+    </dialog>
+
+    <div id="pdf-container">
+        <canvas id="pdf-canvas"></canvas>
+    </div>
+    <script type="module" src="scripts/main.js"></script>
+
+</body>
+
+</html>
